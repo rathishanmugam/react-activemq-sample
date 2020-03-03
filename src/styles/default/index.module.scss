@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'AvertaRegular';
+  src: url('fonts/Averta-Regular.eot');
+  src: url('fonts/Averta-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Averta-Regular.woff') format('woff'),
+  url('fonts/Averta-Regular.ttf') format('truetype'),
+  url('fonts/Averta-Regular.svg#Averta-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvertaBold';
+  src: url('fonts/Averta-Bold.eot');
+  src: url('fonts/Averta-Bold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Averta-Bold.woff') format('woff'),
+  url('fonts/Averta-Bold.ttf') format('truetype'),
+  url('fonts/Averta-Bold.svg#Averta-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1, h5 {
+  font-family: "AvertaBold", Helvetica, Arial, sans-serif;
+  width: 100%;
+  line-height: 125%;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+h1 {
+  font-size:72px;
+  letter-spacing: -3px;
+}
+
+h5 {
+  font-size:32px;
+  letter-spacing: -1px;
+}
+
+.background, .backgroundHidden {
+  background-image: url("white.jpg");
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.backgroundHidden {
+  opacity: 0 !important;
+  transition: opacity 1s linear;
+}
+
+.header {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding-left: 100px;
+  z-index: 20;
+  opacity: 1;
+  background: blue;
+}
+
+.header>.title {
+  height: 100px;
+  display: inline-block;
+  width: auto;
+}
+
+.header>.title::before {
+  content: '';
+  display: inline-block;
+  background: black;
+
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(110% - 8px);
+  z-index: -1;
+  transform: skewX(-20deg) translateX(-20px);
+}
+
+.header>.title::after {
+  content: '';
+  display: inline-block;
+  background: #CDF41B;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  z-index: -2;
+  transform: skewX(-20deg) translateX(-20px);
+}
+
+.header>.title>h1.text {
+  display: inline-block;
+  width: auto;
+  color: white;
+  padding-left: 30px;
+  padding-top: 4px;
+  letter-spacing: -3px;
+  text-shadow: 0 2px 1px black;
+  min-width: 450px;
+}
+
+.header>.raceInfo {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: inline-block;
+  width: auto;
+}
+
+.header>.raceInfo::after {
+  content: '';
+  display: inline-block;
+  background: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  z-index: -1;
+  transform: skewX(-20deg) translateX(-70px);
+}
+
+h5.distance {
+  display: inline-block;
+  width: auto;
+  position: absolute;
+  left: 240px;
+  padding-left: 30px;
+  color: lightgrey;
+  font-family: "AvertaRegular", Helvetica, Arial, sans-serif;
+}
+
+h1 span {
+  margin-left: 30px;
+}
